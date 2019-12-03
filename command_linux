@@ -1,0 +1,13 @@
+Comando para instalar paquetes .tar.gz
+url de referencia: https://blog.desdelinux.net/tutorial-instalar-paquetes-tar-gz-y-tar-bz2/
+tar -zxvf nombredelarchivo.tar.gz
+tar -jxvf nombredelarchivo.tar.bz2
+Configuramos
+./configure
+
+
+Remover un paquete
+sudo apt-get remove nodejs
+
+Instalar versiones de node con nvm
+url referencia: https://www.hostinger.es/tutoriales/instalar-node-js-ubuntu/#Instalar-una-version-especifica-de-Nodejs-usando-NVM
