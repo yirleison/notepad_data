@@ -1,0 +1,17 @@
+
+Que es Redux ?
+
+componentes princimales de react-redux
+
+Provider :  Es el que se encargfa de proveeder toda la data de la aplicación a  los diferentes componentes.
+
+connect: es una función la cual permite conectarnos al store para luego hacer uso del estado de la aplicación, sea para modificacrlo o para acceder a las funciones, connect es una función que espera como párametros dos funciones y a su vez  devuelve otra función una vez que se implemente.
+
+Smart components estos se pueden llamar containers : Estos no dejan de ser componentes y son los que tienen acceso a los estados de la aplicación, es decir que tiene (connect).
+
+Dumb components esto se pueden llamar presentational components: Son componentes los cuales se encargan de renderizado de las vistas hacia el navegador, solamente tienen logica de presentacion.
+
+Qué es yun action :
+
+Qué es un reducer :
+
