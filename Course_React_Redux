@@ -11,7 +11,18 @@ Smart components estos se pueden llamar containers : Estos no dejan de ser compo
 
 Dumb components esto se pueden llamar presentational components: Son componentes los cuales se encargan de renderizado de las vistas hacia el navegador, solamente tienen logica de presentacion.
 
-Qué es yun action :
+Qué es un action :
 
-Qué es un reducer :
+Una acción es un objeto plano (POJO — Plan Old JavaScript Object) que representa una intención de modificar el estado. Las acciones son la única forma en que los datos llegan al store. Cualquier dato, ya sean eventos de UI, callbacks de red, u otros recursos como WebSockets eventualmente van a ser despachados como acciones.
+Las acciones deben tener un campo type que indica el tipo de acción a realizar. Los tipos pueden ser definidos como constantes e importados desde otro módulo Es mejor usar strings como tipos en vez de Symbols ya que los strings son serializables.
+Aparte del type, la estructura de una acción depende de vos. Si estás interesado, revisa Flux Standard Action para recomendaciones de como deberías estar estructurado una acción.
+
+Qué es un reducer : 
+
+type Reducer<S, A> = (state: S, action: A) => S
+Un reducer (también llamado función reductora) es una función que acepta una acumulación y una valor y devuelve una nueva acumulación. Son usados para reducir una colección de valores a un único valor.
+Los reducers no son únicos de Redux — son un concepto principal de la programación funcional. Incluso muchos lenguajes no funcionales, como JavaScript, tienen una API para reducción. En JavaScript, es Array.prototype.reduce().
+En Redux, el valor acumulado es el árbol de estado, y los valores que están siendo acumulados son acciones. Los reducers calculan el nuevo estado en base al anterior estado y la acción. Deben ser funciones puras — funciones que devuelven el mismo valor dados los mismos argumentos. Deben estar libres de efectos secundarios. Esto es lo que permite características increíbles como hot reloading y time travel.
+Los reducers son el concepto más importante en Redux.
+No hagas peticiones a APIs en los reducers.
 
