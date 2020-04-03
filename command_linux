@@ -5,9 +5,20 @@ tar -jxvf nombredelarchivo.tar.bz2
 Configuramos
 ./configure
 
+Descomprimir un .zip
+http://ecapy.com/comprimir-y-descomprimir-tgz-tar-gz-y-zip-por-linea-de-comandos-en-linux/index.html
 
+ps -a  para ver los procesos que estan corriendo actualmente
 Remover un paquete
 sudo apt-get remove nodejs
 
 Instalar versiones de node con nvm
 url referencia: https://www.hostinger.es/tutoriales/instalar-node-js-ubuntu/#Instalar-una-version-especifica-de-Nodejs-usando-NVM
+
+https://l-lin.github.io/angular-datatables/#/basic/server-side-angular-way
+https://www.youtube.com/watch?v=D7_wYYGTBoU
+https://www.youtube.com/watch?v=p5Cq4Y0dEtA
+
+
+
+su - apt install sudo

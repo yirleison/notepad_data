@@ -1,0 +1,20 @@
+  
+  FUNCIONES LAMBDA : 
+	Es un servicio en AWS el cual es sin servidor que ejecuta codigo en respuesta a eventos y administra de manera automatica sus recursos informaticos.
+	Ejecuta codigo automaticamente en respuesta a varios tipos de eventos como solicitudes HTTP a traves de API Gateway, modificaciones realizadas en objetos buckets de S3,actualizaciones de tablas en bases de datos DynamoDB, etc.
+	
+	- Lambda ejecuta el codigo en una infraestructura informatica de alta disponibilidad  y se encarga de la administración intrgral de los recursos informaticos, incluyendo el mantenimiento del servidor, el sistema operativo, el aprovisionamiento de capacidad, el escalado automatico, implementación de parches de seguridad y la monitorizacion.
+	- Lo unicio que tenemos que hacer es subir nuestro codigo.
+	- Las funciones lambda no tienen estado, asi que se puede copiar (escalar) para atender el numero de eventos recibidos en cada monmento.
+	- Se puede coordinar varias funciones lambda para tareas complejas de trabajo o largas, mediante la creación de flujos de trabajo con AWS Step Functions.
+	LIMITES
+		- Memoria disponible: 128 MB - 3008 MB (increentos de 64 MB) 
+		- Tiempo maximo de ejecucion: 15 minutos (900 sg)
+		- Capacidad del disco temporal (/tmp)  para las ejecuciones: 512 MB
+		- Limite de funciones lambda concurrentes: 1000
+	DESARROLLO
+		- Tamaño del codigo de la funcion lambda (comprimido .zip): 50 MB
+		- Tamaño de la funcion  lambda sin comprimir (codigo + dependencias): 250 MB
+		- Puedes user el directorio /tmp para cargar otros ficheros al arrancar.
+		- Tamaño de las variables de entorno: 4 K
+		
