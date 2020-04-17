@@ -1,0 +1,57 @@
+**************************************CURSO DOCKER
+https://docs.docker.com/engine/install/linux-postinstall/
+COMANDOS
+
+######INICIAR DOCKER
+
+
+docker run -i -t <imge> bash : Con este comando corremos un contenedor donde los tags:
+	 -i => Le indicamos al contenedor que se iteractivo que permita ingresar contenido y teclear dentro del contenedor.
+	 -t => Permite utilizar una terminal
+	 -bash => Es la terminal en la cual vamos  a ingresar comandos
+	 
+docker ps: Con este comando lsitamos todos los contenedores que esten corriendos.
+docker ps -a: Con este comando lsitamos todos los contenedores que esten corriendo y tambien los detenidos.
+docker start <name-container>: Con este comando corremos un contenedor el cual se encuentra detenido.
+docker attach <name-container>: Si corremos solamente el comando docker start <name-container> solamente, corriendo el comando 
+	docker 	attach nos perme abrir un bash dentro del contenedor.
+docker ps --help: Con este comando listamos todas las ayudas con respecto a las contenedores.
+docker search: Con este comando listamos todas las versiones de una imagen docker por ejemplo docker search ubuntu.
+docker images: Con este comando listamos todas las imagenes que tenemos en local.
+docker images --help: Con este comando listamos todas las ayudas con respecto a las imagenes
+
+################ Salirse de un contenedor iteractivo sin detenerlo
+
+docker run -i -t <imge> bash
+Nota: no se debe de salir con la instrucción <exit>
+Nota: para salir del contenedor lo hacemos con ctr + p + q, de esta manera el contenedor no se detiene.
+Nota: para volvernos a conectar al contenedor los hacemos con el comando docker attach <name-container>
+
+############### Poniendo nombre a un contenedor con un nombre especifico.
+docker run --name <name-container> -it <imagen exmp: ubuntu>
+
+############## Dockerfile
+Es un documento de texto que contien todos los comando que un usuario puede llamar a la linea de comandos para montar una imagen.
+COMANDOS BASICOS:
+	FROM: Definir una imagen base con la cual se va a crear la nueva imagen con Dockerfile
+		ejemplo: FROM  ubuntu:16.04
+	MONAINTINER: hace referencia al creador de la tarea
+		ejemplo: MONAINTINER ypalomeque palomeque@gmail.comando
+	RUN: nos permite ejecutar comando en la imagen base antes de ser creada.
+		ejemplo: RUN apt-get update  && apt-get install apache2
+	ADD/COPY: permite agregar o copiar archivos desde la maquina local a la imagen.
+		ejemplo: ADD index.html /var/www/html
+	EXPOSE: permite exponer por defecto un puerto para nuestro contenedor
+		ejemplo: EXPOSE 3000
+	CMD: ejecutar una acción por defecto al crear el contenedor, es la finalidad.
+		ejemplo: CMD ["/usr/sbin/apache2/", "-D", "FOREGROUND"]
+######COMANDO PARA CREAR LA IMGEN: 
+	docker build -t <name-image> <rute>
+	ejemplo: -
+	Nota: con el punto le hago teferencia al directorio actual donde esta el Dockerfile.
+	CORRER IMAGEN NUEVA:
+	docker run -d -p <port-container:port-app> <name-image>
+
+##########CREAR UN VOLUMEN PARA UNA DB
+docker run -d --name dbmongo -v <Ruta absoluta de carpeta del host>:/data/db mongo
+ 	

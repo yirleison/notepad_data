@@ -5,12 +5,18 @@ tar -jxvf nombredelarchivo.tar.bz2
 Configuramos
 ./configure
 
+sudo rm -rf <name-folder>
 Descomprimir un .zip
+
+htop: con este comando revisamos el consumo de recurso de la maquina
 http://ecapy.com/comprimir-y-descomprimir-tgz-tar-gz-y-zip-por-linea-de-comandos-en-linux/index.html
 
 ps -a  para ver los procesos que estan corriendo actualmente
 Remover un paquete
 sudo apt-get remove nodejs
+
+touch: con este comando creamos archivos en linux ejemplo touch archivo.extension.
+gedit: con este comando editamos un archivo de text.
 
 Instalar versiones de node con nvm
 url referencia: https://www.hostinger.es/tutoriales/instalar-node-js-ubuntu/#Instalar-una-version-especifica-de-Nodejs-usando-NVM

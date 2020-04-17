@@ -1,0 +1,15 @@
+docker run -it -p 27017:27017 --rm -v $(pwd)/mongo:/data/db mongo
+docker run -it -p 27017:27017  mongo mongo
+docker run -it --rm  --link=naughty_bhaskara:mongo mongo /bin/bash
+
+
+volumes para el container docker
+docker run -it -v /home/yirleison/git-repositories/loansPayment:/app -p 3000:3000 app-back
+
+docker run -it -v /home/yirleison/git-repositories/loansPayment:/app -p 3000:3000 app-back
+
+http://172.17.0.1:4200
+
+
+
+/home/yirleison/git-repositories/appLoanPayment/dist/appLoans
