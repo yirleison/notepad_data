@@ -1,0 +1,13 @@
+
+Ques es React js
+	Libreria de codigo abierto para diseñar interfaces de usuario desarrollada por facebook.
+	
+Caracteristicas:
+ declarativo:
+	Es un cambio del paradigna en cuanto a como desarrollar nuestras pagias con react indicamos es el que se debe de hacer mas no el como. ejemplo del como: ve a la cocina, coge el de la nevera etc es decir una serie de pasos en cambio cuando indicamos el que:
+	declarativo quiero comer pollo.
+ basado en componentes:
+	La interfaz va a estar dividida en partes mas pequeñas y reusables, se pude crear nuevos componentes usando componentes mas pequeños, estos componentes manejan su propio estado. El codigo es mas reusable, pequeño y mantenible.
+	
+	
+	

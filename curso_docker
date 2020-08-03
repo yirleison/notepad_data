@@ -54,4 +54,6 @@ COMANDOS BASICOS:
 
 ##########CREAR UN VOLUMEN PARA UNA DB
 docker run -d --name dbmongo -v <Ruta absoluta de carpeta del host>:/data/db mongo
- 	
+
+##########Comando para ver la ip por la cual se levantan los servicios en docker
+docker-machine ls

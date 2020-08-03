@@ -1,0 +1,32 @@
+26/05/2020
+Reunion asesoria migracion base de datos a aws
+	* enviar informacion  luis acerca de las bases de datos en cloudan
+	* enviar informacion a luis del script de migracion
+	
+Gestion actualizacion certificado digital integracionm (Cesar)
+
+Reunion equipo de migracion para establecer alcance de HA de la migracion
+
+continuacion con el script de migracion en local
+
+27/05/2020
+* Review celula
+* Terminacion script local funcional
+* Pruebas
+* Envio informacion bases de datos a experto de AWS
+
+28/05/2020
+* Daily
+* Dojo equipo nube sobre arquitecturas nuevas
+* Reunion con santi y freyder organizacion data para enviar a experto aws (base de datos transactional_log)
+* Adecuacion de ambiente para probar migracion de data apuntandole a aws.
+* Temas relacionados de certificados con Dairo
+
+29/05/2020
+* Daily
+* Transferencia de conocimiento funcionamiento ITC
+* Reunion con sant, freyder, juan pablo y Dairo Avances migracion AWS
+* Adecuacion de ambiente para probar migracion de data apuntandole a aws.
+En la tarde
+* Creacion base de datos parameter_cvc y migracion de data toda la tarde
+* Creacion reuniones periodicas apoyo por parte de expertos AWS

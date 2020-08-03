@@ -1,0 +1,83 @@
+#############COAMDOS PARA TRABAJAR CON LOCALSTACK
+
+###COAMDO PARA CORRER LOCALSTACK
+docker run -d --name localstack -p 8080:8080 -p 4566-4599:4566-4599 localstack/localstack
+
+###Crear una funcion lambda a partir de un zip en local
+aws lambda create-function \
+--region us-east-1 \
+--function-name api-test-handler \
+--runtime nodejs6.10 \
+--handler index.apiTestHandler \
+--memory-size 128 \
+--zip-file "fileb://apiTestHandler.zip" \
+--role arn:aws:iam::123456:role/role-name --endpoint-url=http://192.168.99.100:4574
+
+Listar lambdas
+aws lambda list-functions --region us-east-1 --endpoint-url=http://192.168.99.100:4574
+
+ 
+aws apigateway create-rest-api --region us-east-1 --name 'API Test' --endpoint-url=http://192.168.99.100:4567
+
+
+aws apigateway get-resources --region us-east-1 --rest-api-id 2kktrwnn3q --endpoint-url=http://192.168.99.100:4567
+
+aws apigateway create-resource \
+--region us-east-1 \
+--rest-api-id 2kktrwnn3q \
+--parent-id sh0x2rnxn3 \
+--path-part "{somethingId}" --endpoint-url=http://192.168.99.100:4567
+
+aws apigateway create-resource \
+--region us-east-1 \
+--rest-api-id 2kktrwnn3q \
+--parent-id sh0x2rnxn3 \
+--path-part "test" --endpoint-url=http://192.168.99.100:4567
+
+
+aws apigateway put-method \
+ --region us-east-1 \
+ --rest-api-id 2kktrwnn3q \
+ --resource-id zfvwcn6s7z \
+ --http-method GET \
+ --request-parameters "method.request.path.somethingId=true" \
+ --authorization-type "NONE" \
+--endpoint-url=http://192.168.99.100:4567
+
+aws apigateway put-integration \
+ --region us-east-1 \
+ --rest-api-id 2kktrwnn3q \
+ --resource-id zfvwcn6s7z \
+ --http-method GET \
+ --type AWS_PROXY \
+ --integration-http-method POST \
+ --uri arn:aws:apigateway:us-east-1:lambda:path/123456/functions/arn:aws:lambda:us-east-1:000000000000:function:api-test-handler/invocations \
+ --passthrough-behavior WHEN_NO_MATCH \
+ --endpoint-url=http://192.168.99.100:4567
+ 
+ aws apigateway create-deployment \
+ --region us-east-1 \
+ --rest-api-id 2kktrwnn3q \
+ --stage-name dev \
+ --endpoint-url=http://192.168.99.100:4567
+ 
+ 
+ eu-west-1
+ 
+ 
+ curl http://192.168.99.100:4567/restapis/2kktrwnn3q/dev/_user_request_/HowMuchIsTheFish
+ 
+ arn:aws:apigateway:${region}:lambda:path/2015-03-31/functions/${lambdaArn}/invocations
+ 
+ arn:aws:apigateway:${region}:lambda:path/2015-03-31/functions/${lambdaArn}/invocations
+ 
+ aws apigateway put-integration \
+ --region us-east-1 \
+ --rest-api-id 3j833lw38j \
+ --resource-id aat1hr54s0 \
+ --http-method GET \
+ --type AWS_PROXY \
+ --integration-http-method POST \
+ --uri arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:000000000000:function:api-test-handler/invocations \
+
+

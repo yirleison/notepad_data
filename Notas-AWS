@@ -18,3 +18,121 @@
 		- Puedes user el directorio /tmp para cargar otros ficheros al arrancar.
 		- Tamaño de las variables de entorno: 4 K
 		
+		dcordobapalacios@gmail.com
+		
+		
+		
+AWS Access Key ID [None]: ypalomeque88
+AWS Secret Access Key [None]: ypalomeque88aws
+Default region name [None]: us-west-2
+Default output format [None]: json
+		
+pakages visual studio code
+    npm install aws-sdk --save
+	
+
+  java -Djava.library.path=./Dynamondb/DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb
+		
+Con este comando creo una tabla en dynamondb local		
+	aws dynamodb create-table --cli-input-json file:///laboratorio_dynamondb/config/parametercvc.json --endpoint-url http://localhost:8000
+
+Eliminar una tabla
+   aws dynamodb delete-table  --table-name parametercvc --endpoint-url http://localhost:8000
+
+Con este comando lsito todas las tablas
+	aws dynamodb list-tables --endpoint-url http://localhost:8000
+
+Listar una tabla en especifico
+	   aws dynamodb scan --table-name parametercvc --endpoint-url http://localhost:8000
+
+https://ufindtech.com/tutorial-dynamodb-espanol/
+		
+		
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		

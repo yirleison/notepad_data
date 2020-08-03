@@ -1,11 +1,12 @@
 sudo service mongod start
 sudo service mongod stop
+mongod --port 27017 --dbpath C:\MongoDB\data\db
+Palomeque1988@.P
 
-                  <ng-template #interesPending>
-                        <td>{{item.interestPending | number:'1.2-2'}}</td>
-                    </ng-template>
-					
-					  <td *ngIf="item.interestPending > 0; else interesPending">
-                        <div style="background-color: #f39c12;padding-left: 2px">
-                            {{item.interestPending | number:'1.2-2'}}</div>
-                    </td>
+
+Nota: 
+	  *falta valdiar en la vista cualdo el cliente paga lo que lleva del presta revisar que el check quede desabilitado.
+      * Cuando el usuario hace click en el boton de pago cuota (si ese pago tiene un estado pagado el boton debe de estar desactivado)
+	  * Pendente enviar desde el front el dato tipo boolean  para saber si se crea una cuota nueva
+	  
+	  
